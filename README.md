@@ -20,53 +20,63 @@ As an example, place the following lines in your main program.
 
 First load the module:
 
-    # Local imports
-    import cedarlog
+```py
+# Local imports
+import cedarlog
+```
 
 Then set the variables for your desired log file title and folder location:
 
-    log_file_title = 'Log_File_Example_Title' # Sys date and time will be prefixed
-    log_file_location = "log_files" # Relative path
-
+```py
+log_file_title = 'Log_File_Example_Title' # Sys date and time will be prefixed
+log_file_location = "log_files" # Relative path
+```
 
 In your main() code:
 
-    def main (your_param1, your_param2, etc, log_file_title, log_file_location):
+```py
+def main (your_param1, your_param2, etc, log_file_title, log_file_location):
 
-      # Open log file and store the returned log file parameters (returned as a tuple)
+    # Open log file and store the returned log file parameters (returned as a tuple)
 
-      log_file_params=cedarlog.use_log_file(switch='open', title=log_file_title, location=log_file_location)
+    log_file_params=cedarlog.use_log_file(switch='open',
+          title=log_file_title, location=log_file_location)
 
-      ...
+    ...
 
-      <Your main code here>
+    <Your main code here>
 
-      ...
+    ...
 
-      # Close log file. Grab values for log_file_name and stdout_fileno from the log_file_params tuple
+    # Close log file. Grab values for log_file_name and stdout_fileno from the log_file_params tuple
 
-      log = log_file_params # Apply short name
-      cedarlog.use_log_file(switch='close', log_file_name=log[0], stdout_fileno=log[1], location=log[2])
+    log = log_file_params # Apply short name
+    cedarlog.use_log_file(switch='close',
+          log_file_name=log[0], stdout_fileno=log[1], location=log[2])
 
-      return
+    return
+```
 
 Call your main() code:
 
+```py
     if __name__ == "__main__":
 
       main (your_param1, your_param2, etc, log_file_title, log_file_location)
-
+```
 
 ## Log File Location
 Note that you will need to *manually* create a folder for the log files relative to your main Python code.
 
 For example:
 
-        /my_python_code_folder
-            /log_files
-            my_main_prog.py
-            cedarlog.py
-            ...
+```
+/my_python_code_folder
+        /log_files
+        my_main_prog.py
+        cedarlog.py
+        ...
+```
 
 ## Reference Code
 Some of the code used was inspired by this article:

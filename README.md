@@ -48,7 +48,8 @@ def main (your_param1, your_param2, etc, log_file_title, log_file_location):
 
     ...
 
-    # Close log file. Grab values for log_file_name and stdout_fileno from the log_file_params tuple
+    # Close log file. Grab values for log_file_name
+    # and stdout_fileno from the log_file_params tuple
 
     log = log_file_params # Apply short name
     cedarlog.use_log_file(switch='close',

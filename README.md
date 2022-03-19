@@ -60,9 +60,9 @@ def main (your_param1, your_param2, etc, log_file_title, log_file_location):
 Call your main() code:
 
 ```py
-    if __name__ == "__main__":
+if __name__ == "__main__":
 
-      main (your_param1, your_param2, etc, log_file_title, log_file_location)
+    main (your_param1, your_param2, etc, log_file_title, log_file_location)
 ```
 
 ## Log File Location

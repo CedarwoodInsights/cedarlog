@@ -73,9 +73,9 @@ For example:
 
 ```
 /my_python_code_folder
-        /log_files
-        my_main_prog.py
-        cedarlog.py
+      -  /log_files
+      -  my_main_prog.py
+      -  cedarlog.py
         ...
 ```
 
